@@ -1,0 +1,15 @@
+//Jimmys Shed
+void setup() {
+  Serial.begin(9600); // Start Serial.
+  pinMode(13, OUTPUT);
+}
+void loop() {
+  int A = analogRead(A0);
+  Serial.println(A);// Serial Monitor.
+  if (A < 100 ) {   // light limit setting
+    digitalWrite(13, HIGH);
+  }
+  else {
+    digitalWrite(13, LOW);
+  }
+}
