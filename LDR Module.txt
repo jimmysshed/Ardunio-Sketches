@@ -1,0 +1,18 @@
+// Jimmys Shed - LDR Module
+int LDRpin = 7;
+int LEDpin = 13;
+void setup() {
+    pinMode(LDRpin,INPUT);
+    pinMode(LEDpin,OUTPUT);
+    Serial.begin(9600);
+}
+void loop() {
+   if( digitalRead( LDRpin ) == 1){
+      digitalWrite( LEDpin,HIGH);
+   }
+   else{
+      digitalWrite( LEDpin , LOW);
+   }
+      Serial.println( digitalRead( LDRpin ));
+   delay(100);
+}
